@@ -1,0 +1,22 @@
+var Home = (function() {
+
+  this.parseTime = function() {
+    return $('#current-page #info').data().time * 1000;
+  }
+
+  this.refreshPage = function() {
+    $.get('/next', function(html) {
+        $('#current-page').html(html)
+    }, 'html');
+  }
+
+  return {
+    init: function() {
+      setInterval(refreshPage, parseTime());
+    }
+  }
+})();
+
+$('document').ready(function() {
+  Home.init()
+});
