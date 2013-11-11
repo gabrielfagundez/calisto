@@ -4,8 +4,7 @@ class Gerrit
   PASSWORD = 'eHsy6cKk+hYD'
 
   def self.get_pending_changes
-    #changes = gerrit_client.changes([URI.encode('q=status:open+project:^numerex.*+reviewer:"Jenkins-CI"&o=LABELS')])
-    changes = gerrit_client.changes([URI.encode('q=status:open+reviewer:"Jenkins-CI"&o=LABELS')])
+    changes = gerrit_client.changes([URI.encode('q=status:open+project:^numerex.*+reviewer:"Jenkins-CI"&o=LABELS')])
     relevant_changes = []
 
     changes.each do |change|
