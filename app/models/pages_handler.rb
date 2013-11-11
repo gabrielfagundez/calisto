@@ -2,8 +2,8 @@ class PagesHandler
 
   ALL_PAGES =
       [
-          BambooPage.new('bamboo', 30.seconds, 'https://build.numerexfast.com/bamboo/telemetry.action?filter=favourites'),
-          Page.new('zenkai', 20.seconds)
+          BambooPage.new('bamboo', 5.seconds, 'https://build.numerexfast.com/bamboo/telemetry.action?filter=favourites'),
+          ZenkaiPage.new('zenkai', 10.seconds, 'http://zenkai.herokuapp.com/api/pending_estimates.json')
       ]
 
   class << self

@@ -1,4 +1,6 @@
 <div id="current-page">
 <%= render partial: @current_page.name %>
+<div id="info" data-time="<%= @current_page.time %>"></div>
 </div>
+
 <%= javascript_include_tag('home') %>

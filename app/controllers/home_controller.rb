@@ -7,6 +7,7 @@ class HomeController < ApplicationController
 
   def next
     @current_page = PagesHandler.instance.next!
+    @current_page.process!
     render partial: @current_page
   end
 

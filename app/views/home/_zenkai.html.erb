@@ -1,2 +1,8 @@
-Zenkai Info!!
-<%= render partial: 'info' %>
+<h1>Pending Tickets</h1>
+<ul>
+  <ul>
+   <% @current_page.pending.each do |ticket| %>
+     <li><%= ticket['name'] %></li>
+   <% end%>
+  </ul>
+ </ul>
