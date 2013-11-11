@@ -1,11 +1,15 @@
 class Page
 
-  attr_accessor :name, :url, :time
+  attr_accessor :name, :time
 
-  def initialize(name, url, time)
+  def initialize(name, time)
     @name = name
-    @url  = url
     @time = time
+  end
+
+  # To be overridden
+  def process!
+    self
   end
 
   # Needed by rails for rendering views
