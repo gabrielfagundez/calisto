@@ -28,6 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'httparty'
+gem 'gerry', git: 'https://github.com/maveonair/gerry.git'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

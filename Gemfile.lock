@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/maveonair/gerry.git
+  revision: dc08997b8213813287bec20e5e6b135b4068aa1e
+  specs:
+    gerry (0.0.1)
+      httparty
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -113,6 +120,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  gerry!
   httparty
   jbuilder (~> 1.2)
   jquery-rails

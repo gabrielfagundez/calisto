@@ -4,8 +4,8 @@ require 'httparty'
 class ZenkaiPage < Page
   attr_accessor :url, :pending
 
-  def initialize(name, time, url)
-    super(name, time)
+  def initialize(time, url)
+    super('zenkai', time)
     @url = url
   end
 
