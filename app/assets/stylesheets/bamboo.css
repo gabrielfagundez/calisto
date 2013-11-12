@@ -1,0 +1,196 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block;}audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}
+html {
+    height: 100%;
+    width: 100%;
+}
+body.bamboo {
+    background: #000;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.bamboo h2 {
+    color: #fff;
+    font-size: 38px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.bamboo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bamboo .no-builds {
+    text-align: center;
+}
+
+.bamboo .build {
+    float: left;
+    margin-bottom: 40px;
+    cursor: pointer;
+    width: 25%;
+}
+
+.bamboo .build .result {
+    height: 110px;
+    border-right: 2px solid #000;
+    padding-top: 10px;
+}
+
+.bamboo .build .Successful,
+.bamboo .build .Successful .details-ext {
+    background: #393;
+}
+.bamboo .build .Failed,
+.bamboo .build .Failed .details-ext {
+    background: #962526;
+}
+.bamboo .build .Unknown,
+.bamboo .build .Unknown .details-ext {
+    background: #666;
+}
+
+.bamboo .build .plan-name {
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-box-shadow: 0 -1px rgba(0, 0, 0, 0.13), 0 1px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0 -1px rgba(0, 0, 0, 0.13), 0 1px rgba(0, 0, 0, 0.13);
+    box-shadow: 0 -1px rgba(0, 0, 0, 0.13), 0 1px rgba(0, 0, 0, 0.13);
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 10px 5px 5px;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+}
+
+.bamboo .build .plan-name:before {
+    filter: alpha(opacity = 50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    line-height: 0.5;
+    margin-right: 0.25em;
+}
+.bamboo .build .Successful .plan-name:before {
+    content: "\2714";
+}
+.bamboo .build .Failed .plan-name:before {
+    content: "\2718";
+}
+
+.bamboo .build .project-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bamboo .build .build-details {
+    padding-top: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.bamboo .build .build-details time {
+    margin-top: 5px;
+    filter: alpha(opacity = 60);
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+}
+
+.bamboo .build .reason {
+    font-size: 1.125em;
+    text-align: center;
+    padding: 10px 5px;
+    filter: alpha(opacity = 60);
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+}
+
+.bamboo .build .reason a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bamboo .build .details-ext {
+    display: none;
+    position: relative;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 10px 0;
+    z-index: 1;
+    border-bottom: 2px solid #000;
+}
+
+.bamboo .build .details-ext .details-ext-content {
+    padding-left: 10px;
+}
+
+.bamboo .build .details-ext .details-ext-content td {
+    vertical-align: top;
+}
+
+.bamboo .build .details-ext .details-ext-content th {
+    vertical-align: top;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.bamboo .indicator {
+    height: 38px;
+    left: 10px;
+    position: absolute;
+    width: 38px;
+}
+
+.bamboo #message-blanket {
+    background: #000;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    opacity: 0.6;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.bamboo #message {
+    background: #000;
+    border: 1px solid #333;
+    -webkit-box-shadow: 2px 2px 5px #000;
+    -moz-box-shadow: 2px 2px 5px #000;
+    box-shadow: 2px 2px 5px #000;
+    color: #fff;
+    font-weight: bold;
+    left: 50%;
+    margin: 0 0 0 -220px;
+    padding: 20px;
+    position: absolute;
+    top: 200px;
+    width: 400px;
+    z-index: 1;
+}
+.bamboo #message.server-paused {
+    margin-left: -260px;
+    padding-left: 100px;
+}
+.bamboo .server-paused:before {
+    content: "||";
+    font-size: 64px;
+    left: 35px;
+    line-height: 1;
+    position: absolute;
+    top: 9px;
+}

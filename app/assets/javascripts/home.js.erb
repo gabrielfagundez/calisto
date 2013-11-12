@@ -1,18 +1,31 @@
 var Home = (function() {
 
-  this.parseTime = function() {
+  var parseTime = function() {
     return $('#current-page #info').data().time * 1000;
   }
 
-  this.refreshPage = function() {
+  var parsePageName = function() {
+    return $('#current-page #info').data().name;
+  }
+
+  var refreshPage = function() {
     $.get('/next', function(html) {
-        $('#current-page').html(html)
+      $('#current-page').html(html)
+      updateBodyClass();
     }, 'html');
+  }
+
+  var autoRefresh = function () {
+    setInterval(refreshPage, parseTime());
+  }
+
+  var updateBodyClass = function () {
+    $('body').removeClass().addClass(parsePageName());
   }
 
   return {
     init: function() {
-      setInterval(refreshPage, parseTime());
+      autoRefresh();
     }
   }
 })();

@@ -1,13 +1,13 @@
-.panel {
+.zenkai .panel {
   margin-top: 50px;
   width: 230px;
   margin-right: 50px;
   float: left;
 }
-#pending_zenkai {
+.zenkai #pending_zenkai {
   font-size: 24px;
 }
 
-#pending_zenkai h1{
+.zenkai #pending_zenkai h1{
   text-align: center;
 }

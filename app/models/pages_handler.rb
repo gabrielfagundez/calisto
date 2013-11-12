@@ -3,8 +3,8 @@ class PagesHandler
   ALL_PAGES =
       [
           BambooPage.new(5.seconds, 'https://build.numerexfast.com/bamboo/telemetry.action?filter=favourites'),
-          ZenkaiPage.new(10.seconds, 'http://zenkai.herokuapp.com/api/pending_estimates.json'),
-          GerritPage.new(30.seconds)
+          ZenkaiPage.new(5.seconds, 'http://zenkai.herokuapp.com/api/pending_estimates.json'),
+          GerritPage.new(5.seconds)
       ]
 
   class << self
