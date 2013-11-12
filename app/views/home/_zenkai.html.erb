@@ -1,8 +1,14 @@
-<h1>Pending Tickets</h1>
-<ul>
-  <ul>
-   <% @current_page.pending.each do |ticket| %>
-     <li><%= ticket['name'] %></li>
-   <% end%>
-  </ul>
- </ul>
+<div id="pending_zenkai" class="container">
+  <div class="page-header">
+    <h1>Pending Tickets</h1>
+  </div>
+        <% @current_page.pending.each do |ticket| %>
+           <div class="panel panel-primary">
+              <div class="panel-heading">
+                <%= ticket['name'] %>
+              </div>
+              <div class="panel-body">Description</div>
+            </div>
+       <% end%>
+
+</div>
