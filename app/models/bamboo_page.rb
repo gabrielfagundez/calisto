@@ -3,16 +3,17 @@ require 'nokogiri'
 class BambooPage < Page
   include HTTParty
 
-  attr_accessor :url, :body, :doc
+  URL = 'https://build.numerexfast.com/bamboo/telemetry.action?filter=favourites'
 
-  def initialize(time, url)
-    super('bamboo', time)
-    @url = url
+  attr_accessor :body
+
+  def initialize
+    super('bamboo', 45.seconds)
   end
 
   def process!
     http_response = HTTParty.get(
-        url,
+        URL,
         basic_auth: {
             username: 'mgolffed',
             password: 'changeme'

@@ -1,8 +1,8 @@
 class GerritPage < Page
   attr_accessor :changes
 
-  def initialize(time)
-    super('gerrit', time)
+  def initialize
+    super('gerrit', 45.seconds)
   end
 
   def process!
