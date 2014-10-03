@@ -1,0 +1,15 @@
+<div class="container">
+
+  <div class="star-container hide">
+    <div class="star-img">
+      <%= image_tag 'star.png' %>
+    </div>
+    <div class="star-description"></div>
+  </div>
+
+</div>
+
+<%= javascript_include_tag 'stars' %>
+<%= stylesheet_link_tag 'stars' %>
+
+<div id="info" data-time="<%= @current_page.time %>" data-name="<%= @current_page.name %>"></div>

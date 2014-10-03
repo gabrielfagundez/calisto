@@ -2,9 +2,8 @@ class PagesHandler
 
   ALL_PAGES =
       [
-          BambooPage.new
-          #ZenkaiPage.new,
-          #GerritPage.new
+          BambooPage.new,
+          StarsPage.new
       ]
 
   class << self
