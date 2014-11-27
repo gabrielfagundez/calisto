@@ -8,7 +8,7 @@ class BambooPage < Page
   attr_accessor :body
 
   def initialize
-    super('bamboo', 2.seconds)
+    super('bamboo', 45.seconds)
   end
 
   def process!

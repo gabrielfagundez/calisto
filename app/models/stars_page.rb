@@ -1,7 +1,7 @@
 class StarsPage < Page
 
   def initialize
-    super('stars', 1.seconds)
+    super('stars', 45.seconds)
   end
 
   def process!
