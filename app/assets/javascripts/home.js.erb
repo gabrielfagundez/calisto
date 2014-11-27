@@ -1,7 +1,5 @@
 var Home = (function() {
 
-  var interval_id;
-
   var parseTime = function() {
     return $('#current-page #info').data().time * 1000;
   }
@@ -11,15 +9,17 @@ var Home = (function() {
   }
 
   var refreshPage = function() {
-    clearInterval(interval_id);
     $.get('/next', function(html) {
       $('#current-page').html(html)
       updateBodyClass();
-    }, 'html');
+    }, 'html')
+    .done(function(){
+      autoRefresh()
+    });
   }
 
   var autoRefresh = function () {
-    interval_id = setInterval(refreshPage, parseTime());
+    setTimeout(refreshPage, parseTime());
   }
 
   var updateBodyClass = function () {
@@ -33,7 +33,6 @@ var Home = (function() {
   }
 })();
 
-$('document').ready(function() {
-  // TODO: This is being executed twice. Review.
+$(function() {
   Home.init()
 });

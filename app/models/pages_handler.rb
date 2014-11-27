@@ -1,10 +1,9 @@
 class PagesHandler
 
-  ALL_PAGES =
-      [
-          BambooPage.new,
-          StarsPage.new
-      ]
+  ALL_PAGES = [
+      BambooPage.new,
+      StarsPage.new
+  ]
 
   class << self
 

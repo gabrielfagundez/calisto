@@ -1,9 +1,10 @@
-require 'nokogiri'
-
 class StarsPage < Page
 
   def initialize
-    super('stars', 30.seconds)
+    super('stars', 1.seconds)
+  end
+
+  def process!
   end
 
 end
