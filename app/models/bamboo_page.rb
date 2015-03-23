@@ -18,7 +18,7 @@ class BambooPage < Page
             username: 'mgolffed',
             password: 'changeme'
         },
-        ssl_version: :SSLv3)
+        ssl_version: :TLSv1)
     @body = Nokogiri::HTML(http_response.body).css('body').to_s
   end
 
